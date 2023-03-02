@@ -76,9 +76,10 @@ for (let index = 0; index <= data.elements.length; index++) {
 	const mapurl = data.elements[index].maplocation;
 	const qrurl = data.elements[index].qrcode;
 	const qrid = data.elements[index].qrid;
+	const fenglish = english.toLowerCase();
 	console.log(campusid,departid,hindi,english,mapurl,qrurl,qrid);
 
-	htmlgenerator(campusid,departid,hindi,english,mapurl,qrid);
+	htmlgenerator(campusid,departid,hindi,fenglish,mapurl,qrid);
 }
 
 /* QR CODE GENERATOR*/

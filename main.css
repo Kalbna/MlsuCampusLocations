@@ -209,6 +209,8 @@ input[type="checkbox"]:checked ~ div {
 	font-family: 'Roboto', sans-serif;
 	font-size: 40px;
 	font-weight: 700;
+	text-transform: capitalize;
+	word-wrap: break-word;
 	color: #370b0b;
 	/* border: 1px solid mediumspringgreen; */
 }
@@ -410,6 +412,9 @@ footer{
 		margin-left: 1rem;
 		margin-top: 5rem;
 		gap: 2rem;
+	}
+	.sbox{
+		width: 200px;
 	}
 
 }
