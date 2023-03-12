@@ -67,11 +67,13 @@ header{
 	height: 30px;
 	width: 150px;
 	background-color: transparent;
-	border: transparent;
+	border: none;
 	border-radius: 8px;
 	text-align: center;
 	font-size: large;
+
 }
+
 
 /* DO NOT TOUCH IT */
 /* *****MLSU LOGO ************/
@@ -163,7 +165,10 @@ input[type="checkbox"]:checked ~ div {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-top: 5rem;
-	gap: 5rem;
+	gap: 5rem ;
+/* 	display: grid;
+	gap:5rem;
+	grid-template-columns: repeat(auto-fill,minmax(481px,482px)); */
 }
 /* MAIN DEP*/
 .dep{
@@ -173,6 +178,7 @@ input[type="checkbox"]:checked ~ div {
 	flex-direction: column;
 	flex-wrap: nowrap;
 	border: 3px solid black;
+	margin-top: 2rem;
 	border-radius: 9px;
 }
 /* DEP DIVIDER*/
@@ -375,10 +381,11 @@ footer{
 
 @media only screen and (max-width:600px) {
 	body{
-		width: 100%;
+		width: 100vw;
+		zoom: 0.8;
 	}
 	.logoname{
-		max-width: 380px;
+		max-width: 100%/* 380px */;
 		flex-direction: column;
 		flex-wrap: nowrap;
 		justify-content: center;
@@ -387,12 +394,15 @@ footer{
 	}
 
 	main,footer{
-		max-width: 380px;
+		max-width: 100%/* 380px */;
 	}
 	header{
-		min-width: 380px;
-		max-width: 381px;
+		/* min-width: 380px; */
+		width:max-content;
+		justify-content: center;
+		/* max-width: 381px; */
 	}
+
 	footer{
 		justify-content: center;
 		align-items: center;
@@ -408,7 +418,7 @@ footer{
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content:start;
+		justify-content:center;
 		margin-left: 1rem;
 		margin-top: 5rem;
 		gap: 2rem;

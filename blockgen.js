@@ -7,7 +7,7 @@ fetch("../js/blockdetail.json").then(
 	console.log(data.elements[0].departid);
 }); */
 import data from './blockdetail.json' assert {type:'json'};
-console.log(data.elements[0].english);
+//console.log(data.elements[0].english);
 
 /* function elementGather(i){
 	const campusid = data.elements[i].campusid;
@@ -53,13 +53,13 @@ function htmlgenerator(campusid,departid,hindi,english,mapurl,qrid){
 	</div>
 </div> 
 	`;
-	console.log(campusid);
+	//console.log(campusid);
 };
 
 const datalenght = data.elements.length;
-console.log(datalenght);
+//console.log(datalenght);
 const dataArray = data.elements;
-console.log(dataArray);
+//console.log(dataArray);
 
 
 
@@ -68,7 +68,7 @@ console.log(dataArray);
 /* BLOCK GENERATOR*/
 for (let index = 0; index <= data.elements.length; index++) {
 	const element = data.elements[index];
-	console.log(element);
+	//console.log(element);
 	const campusid = data.elements[index].campusid;
 	const departid = data.elements[index].departid;
 	const hindi = data.elements[index].hindi;
@@ -77,7 +77,7 @@ for (let index = 0; index <= data.elements.length; index++) {
 	const qrurl = data.elements[index].qrcode;
 	const qrid = data.elements[index].qrid;
 	const fenglish = english.toLowerCase();
-	console.log(campusid,departid,hindi,english,mapurl,qrurl,qrid);
+	//console.log(campusid,departid,hindi,english,mapurl,qrurl,qrid);
 
 	htmlgenerator(campusid,departid,hindi,fenglish,mapurl,qrid);
 }
