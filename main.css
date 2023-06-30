@@ -1,430 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
-
-
 *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-body{
-	width: 100vw;
-	min-width: 481px;
-	max-width: 992px;
-	/* height: 100vh;
-	min-height: 1024px; */
-	margin: auto;
-	background:radial-gradient(#AEB78B ,#CF8F05);
-	color: whitesmoke;
-	/* border: 1px solid darkblue; */
-
+html {
+  font-size: 62.5%;
 }
 
-/* THIS IS FOR ALL ELEMENTS */
-:root{
-	--FS:12px;
-	--FF:'Gloock', serif;
-	--FC:"black";
-	--FLC:"black";
-	--FCA:"black";
-
+body {
+ /*  font-size: 1.6rem; */
+  font-family: sans-serif;
+  color: #111433;
+  background-color: #ffffff;
 }
 
+a {
+  color: #3f8654;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
 
 header{
-	min-width: 481px;
-	max-width: 992px;
-	min-height:125px ;
-/* 	height: max(5vh); */
-	display: flex;
-	flex: column nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	/* border: 1px solid red; */
+  height: 100px;
 }
-.logoname{
-	min-height: 125px;
-	flex-grow: 1;
-	background: transparent;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-	/* border: 1px solid firebrick; */
-}
-.searchs{
-	/* min-height: 125px; */
-	flex-grow: 0.1;
-	display: flex;
-	flex: column nowrap;
-	justify-content: flex-end;
-	align-items: flex-end;
-	/* border: 1px solid green; */
-}
-.sbox{
-	height: 30px;
-	width: 150px;
-	background-color: transparent;
-	border: none;
-	border-radius: 8px;
-	text-align: center;
-	font-size: large;
-
+.cd-main-content {
+  
+  min-height: calc(100vh - 100px);
+  padding: 2em 5%;
+  line-height: 2;
 }
 
 
-/* DO NOT TOUCH IT */
-/* *****MLSU LOGO ************/
 
-.logohead{
-  position: relative;
-  display: flex;
+
+.obje{
+  min-width: 509px;
+  width:50%;
+  /* border: 1px solid blue; */
+}
+/* @media screen and (max-width:950px) {
+  .obje{
+    min-width: 330px;
+  }
+  
+} */
+@media  screen and (max-width:768px) {
+  header{
+    height: min-content;
+  }
+  .obje{
+    min-width:300px ;
+  }
+  
+}
+@media screen and (max-width:550px) {
+  header{
+    height: min-content;
+  }
+  .obje{
+    min-width:300px;
+  }
+
 }
 
-.logohead>li {
-  list-style: none;
-}
-
-label {
-  position: relative;
-}
-
-.logohead>li>input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
+/* #openMyPopup{
+  border: none;
   cursor: pointer;
-  height: 80px;
-  width: 80px;
+  width: max-content;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: bolder;
+  width: 70px;
+  height: 30px;
+  border: 1px solid fuchsia;
+} */
+#closePopup,#openMyPopup,#admindown,#departdown,#homedown {
+  background: white;
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+}
+#closePopup:focus,#openMyPopup:focus,#admindown:focus,#departdown:focus,#homedown:focus {
+  outline: none;
+}
+#closePopup:hover,#openMyPopup:hover,#admindown:hover,#departdown:hover,#homedown:hover {
+  
+  background: #c0e4eb;
+}
+.containerr {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.qrpop{
+  width: 256px;
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid fuchsia;
+  z-index: 33;
+}
+
+
+
+
+.bodyauto{
+  max-width: 1150px;
+  /* min-width: 1140px; */
+  margin: 0 auto;
+}
+
+
+
+.engname{
+  width: 280px;
+  height: 60px;
+  display: grid;
+  place-content: center;
+  text-transform:capitalize;
+line-height: 1.45;
+  word-break: keep-all;
+  text-align: center;
+  padding: 20px auto;
+/*   color: hsla(0,0%,0%,0); */
+  perspective: 80px;
+  outline: none;
+  text-shadow: #bbb 0 0 1px, #fff 0 -1px 2px, #fff 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;
+  transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+}
+.hindiname {
+  width: 280px;
+  height: 60px;
+  display: grid;
+  place-content: center;
+  line-height: normal;
+  /* color: #fff; */
+  text-align: center;
+  padding: 20px auto;
+/*   text-shadow: -2px 3px 0 #dba1a1, 0 2px 0 #d89999, 0 3px 0 #d59292, 0 4px 0 #d28a8a, 0 5px 0 #cf8383, 0 6px 0 #cd7c7c, 0 7px 0 #ca7474, 0 8px 0 #c76d6d, 0 0 5px rgba(230, 139, 139, .05), 0 -1px 3px rgba(230, 139, 139, .2), 0 9px 9px rgba(230, 139, 139, .3), 0 12px 12px rgba(230, 139, 139, .3), 0 15px 15px rgba(230, 139, 139, .3); */
+}
+
+
+.gm {
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0;
+  height: 12rem;
+  width: 12rem;
+  border: 0.6rem solid #555;
+/*   background: #555; */
+  overflow: hidden;
+  transition: transform 0.25s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.gm .icon {
+  fill: #fff;
+  width: 4rem;
+  height: 4rem;
+}
+.gm .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4rem;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #fff;
+  background: #b71c1c;
+  padding: 0.75rem;
+  transition: none;
+}
+.gm:hover {
+  cursor: pointer;
   z-index: 100;
+  transform: scale(1.1);
+  border: 0.6rem solid #e57373;
+  background: #f44336;
+  box-shadow: 0 0 3rem #f44336;
+  animation: button-animation 0.5s ease-out;
 }
-
-.logohead>li>div {
-  position: relative;
-  height: 80px;
-  width: 80px;
-  background: transparent;
-  color: #555;
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 46px;
-  cursor: pointer;
-  margin: 0 4px;
-  border-radius: 20px;
-  box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
-    4px 4px 6px rgba(0, 0, 0, 0.2),
-    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
-    inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+.gm:hover .text {
+  bottom: 0;
+  transition: bottom 0.25s ease-out;
 }
-
-/* .logohead>li>div:before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 75px;
-  height: 38px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
+.gm:focus {
+  outline: none;
 }
- */
-input[type="checkbox"]:checked ~ div {
-  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
-    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
-  color: yellow;
-  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
-  animation: glow 1.5s linear infinite;
+.gm:active {
+  transform: scale(1);
 }
-
-@keyframes glow {
+@keyframes button-animation {
   0% {
-    filter: hue-rotate(0deg);
-  }
+    box-shadow: 0 0 12rem #626262;
+ }
   100% {
-    filter: hue-rotate(360deg);
-  }
+    box-shadow: 0 0 3rem #626262;
+ }
+}
+
+.itext{
+  display: grid;
+  place-content: center;
+
+  font-size: 7rem;
+  text-shadow: 1px 1px 1px #919191,
+      1px 2px 1px #919191,
+      1px 3px 1px #919191,
+      1px 4px 1px #919191,
+      1px 5px 1px #919191,
+      1px 6px 1px #919191,
+      1px 7px 1px #919191,
+      1px 8px 1px #919191,
+      1px 9px 1px #919191,
+      1px 10px 1px #919191,
+  1px 18px 6px rgba(16,16,16,0.4),
+  1px 22px 10px rgba(16,16,16,0.2),
+  1px 25px 35px rgba(16,16,16,0.2),
+  1px 30px 60px rgba(16,16,16,0.4);
 }
 
 
+.scrollToTopBtn {
+  background-color: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 48px;
+  width: 48px;
 
-
-
-
-
-/* IT NEED SOME  POLISHING  IN THIS SECTION*/
-/* -----------DO NOT TOUCH IT ------------*/
-.depart{
-	min-width: 481px;
-	max-width: 992px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	margin-top: 5rem;
-	gap: 5rem ;
-/* 	display: grid;
-	gap:5rem;
-	grid-template-columns: repeat(auto-fill,minmax(481px,482px)); */
-}
-/* MAIN DEP*/
-.dep{
-	width: 360px; /*340*/
-	height: 420px; /* 320*/
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	border: 3px solid black;
-	margin-top: 2rem;
-	border-radius: 9px;
-}
-/* DEP DIVIDER*/
-.depname{
-	flex-grow: 2;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	/* border: 1px solid blueviolet; */
-}
-.hindi{
-	width: 50%;
-	height: 100%;
-	display: flex;
-	align-items: end;
-	text-align: left;
-	padding:20px ;
-	font-family: 'Roboto', sans-serif;
-	font-size: 40px;
-	font-weight: 700;
-	color: #370b0b;
-	/* border: 1px solid midnightblue; */
-}
-.english{
-	width: 50%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: start;
-	text-align: right;
-	padding:20px ;
-	font-family: 'Roboto', sans-serif;
-	font-size: 40px;
-	font-weight: 700;
-	text-transform: capitalize;
-	word-wrap: break-word;
-	color: #370b0b;
-	/* border: 1px solid mediumspringgreen; */
-}
-.mapqr{
-	flex-grow: 0.1;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-}
-.map{
-	width: 50%;
-	display: flex;
-	justify-content: start;
-	padding-left: 10px;
-	align-items: center;
-	font-size: x-large;
-	background-image: url(google-maps-logo-1-1-1429x2048.png);
-	background-size:contain;
-	background-position:right;
-	background-repeat: no-repeat;
-	/* border: 1px solid yellow; */
-}
-.qr{
-	width: 50%;
-	display: grid;
-	place-content: center;
-	font-size: x-large;
-	color: black;
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(10px);
+  /* and a transition */
+  transition: all 0.5s ease;
 }
 
-
-/* FOOTER GOES FROM HERE*/
-
-footer{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-
-	/* border: 1px solid fuchsia; */
-}
-.last{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 3rem;
-}
-.lastcommon{
-	width: 250px;
-	height: 400px;
+.showBtnnn {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* THIS IS ADDRESS SECTION 
-	----DO---NOT---TOUCH---IT----
-*/
-.address{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	align-items: center;
-	justify-content: space-evenly;
-	font-family: 'Roboto','Gloock', serif;
-	color: black;
-	word-spacing: 1px;
-	font-size: 17px;
-	font-weight: 600;
-	letter-spacing: 0.3px;
-}
-#address{
-	text-align: center;
-	height: 100px;
-	padding: 5px;
-	/* border: 1px solid tomato; */
-}
-#soial{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 1rem;
-	margin-top: 10px;
-	list-style-type: none;
-	text-decoration: underline;
-	/* border: 1px solid red; */
-}
-.addList{
-	height: 100px;
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	
-	/* border: 1px solid violet; */
-}
-:any-link,:visited,:active{
-	text-decoration: none;
-	color: black;
-}
-
-/* IT'S TIME FOR QUICK LINKS */
-.quicklink{
-	padding-top: 20px;
-	
-	/* border: 1px solid hotpink; */
-}
-.qucikheading{
-	font-size: 27px;
-	border-bottom: 2px dashed black;
-}
-.quicklist{
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	list-style-type: none;
-	font-family: 'Roboto','Gloock', serif;
-	color: black;
-	word-spacing: 1px;
-	font-size: 17px;
-	font-weight: 600;
-	letter-spacing: 0.3px;
-	/* border: 1px solid navy; */
-}
-.quicklist>li{
-	width: 100%;
-	height: 40px;
-	display: grid;
-	place-content: center;
-	/* border: 1px solid magenta; */
-}
-
-/* NOW WE CAN GO  FORWARD FOR THE WEATHER API  SYSTEM 
-*************** THIS IS NOT FUNCTION NOW WE CAN DO IT IN NEXT UPGRADE ********************** 
-*/
-.explore{
-	display: grid;
-	place-content: center;
-	font-size: 50px ;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-style: italic;
-	color: #555;
-	/* border: 1px solid mediumorchid; */
-}
- 
-
-/* COPYRIGHT CLIAM */
-
-.copyrightclaim{
-	text-align: left;
-	letter-spacing: 1px;
-	line-height: 1.5em;
-	border-top: 2px dotted #370b0b ;
-	font-family:'Roboto','Gloock', serif ;
-	color: black;
-	/* border: 1px solid khaki; */
-}
-
-@media only screen and (max-width:600px) {
-	body{
-		width: 100vw;
-		zoom: 0.8;
-	}
-	.logoname{
-		max-width: 100%/* 380px */;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: center;
-		padding-top: 25px;
-		gap: 3rem;
-	}
-
-	main,footer{
-		max-width: 100%/* 380px */;
-	}
-	header{
-		/* min-width: 380px; */
-		width:max-content;
-		justify-content: center;
-		/* max-width: 381px; */
-	}
-
-	footer{
-		justify-content: center;
-		align-items: center;
-		margin-top: 2rem;
-	}
-	.last{
-		margin-top: 2rem;
-		justify-content: center;
-
-	}
-	#mainsection{
-		min-width: 380px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content:center;
-		margin-left: 1rem;
-		margin-top: 5rem;
-		gap: 2rem;
-	}
-	.sbox{
-		width: 200px;
-	}
-
+.bodyauto{
+  border-left: 10px ridge #0F1110;
+  border-right: 10px ridge #0F1110;
 }
