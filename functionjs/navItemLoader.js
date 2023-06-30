@@ -18,7 +18,6 @@ function departloader(id,english) {
 
 function capitalizeFirst(str) {
   let word = str.toUpperCase();
-  console.log(word);
   return capWord = word.charAt(0).toUpperCase() + word.slice(1);
 }
 
