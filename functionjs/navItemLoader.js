@@ -4,6 +4,7 @@ const admin = document.getElementById("my-dropdown-id");
 const adminblock = document.getElementById("admindown");
 const depart = document.getElementById("blog");
 const departblock = document.getElementById("departdown");
+const buttonw = document.getElementById("buttonshow");
 
 var capWord;
 function adminloader(id,english) {
@@ -48,12 +49,14 @@ adbtn.addEventListener("click",(adbtn) =>{
   let adele = adbtn.target;
   if (adbtn.target.className === "adbtn" ) {
     loader();
+    buttonw.innerText = `Show Less`;
   }
 })
 depbtn.addEventListener("click",(depbtn) =>{
   let depele = depbtn.target;
   if (depbtn.target.className === "debtn" ) {
     loader();
+    buttonw.innerText = `Show Less`;
     
   }
 })
