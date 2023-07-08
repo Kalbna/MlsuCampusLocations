@@ -28,6 +28,7 @@ min-height: 10vh;
   font-weight: 400;
   text-transform: capitalize;
   font-size: 1.5rem;
+  font-style: normal;
 }
 
 .footer__addr h2 {
