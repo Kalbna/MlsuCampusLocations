@@ -90,7 +90,6 @@
 .footer__logo{
   color: var(--Dtextcolor);
   font-weight: 800;
-  font-style: italic;
   font-size: var(--Dfootheadingfontsize);
 }
 
