@@ -24,7 +24,6 @@ min-height: 10vh;
 }
 
 .footer__logo {
-  font-family: 'sans-seri', 'Pacifico', cursive;
   font-weight: 400;
   text-transform: capitalize;
   font-size: 1.5rem;
